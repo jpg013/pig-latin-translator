@@ -1,4 +1,4 @@
-import { englishToPigLatin } from './generator';
+import { translateToPigLatin } from './translateToPigLatin';
 
 const commonSayings = [
   [
@@ -26,33 +26,33 @@ const commonSayings = [
 describe('@generatorenglishToPigLatin', () => {
   describe('englishToPigLatin', () => {
     test('it translate the word "dog"', () => { 
-      expect(englishToPigLatin('dog')).toStrictEqual('ogday');
+      expect(translateToPigLatin('dog')).toStrictEqual('ogday');
     });
 
     test('it translates the word "plants"', () => {
-      expect(englishToPigLatin('plants')).toStrictEqual('antsplay');
+      expect(translateToPigLatin('plants')).toStrictEqual('antsplay');
     });
 
     test('it translates the word "am"', () => {
-      expect(englishToPigLatin('am')).toStrictEqual('amyay');
+      expect(translateToPigLatin('am')).toStrictEqual('amyay');
     });
 
     test('it translates the word "Hello!"', () => {
-      expect(englishToPigLatin('Hello!')).toStrictEqual('Ellohay!');
+      expect(translateToPigLatin('Hello!')).toStrictEqual('Ellohay!');
     });
 
     test('it translates the word "you"', () => {
-      expect(englishToPigLatin('you')).toStrictEqual('ouyay');
+      expect(translateToPigLatin('you')).toStrictEqual('ouyay');
     });
 
     test('it translates the word "Latin?"', () => {
-      expect(englishToPigLatin('Latin?')).toStrictEqual('Atinlay?');
+      expect(translateToPigLatin('Latin?')).toStrictEqual('Atinlay?');
     });
 
     test('it translates common phrases', () => {
       commonSayings.forEach((x) => {
         const [phrase, expected] = x;
-        expect(englishToPigLatin(phrase)).toStrictEqual(expected);
+        expect(translateToPigLatin(phrase)).toStrictEqual(expected);
       });
     });
   });
